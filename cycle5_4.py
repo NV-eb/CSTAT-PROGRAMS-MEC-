@@ -27,12 +27,11 @@ for col in columns:
     plt.xticks(rotation=45)
     plt.show()
 
-sns.boxplot(data=df, x='Attrition_Flag', y='Customer_Age')
+sns.boxplot(data=df, x='Total_Relationship_Count', y='Customer_Age')
 plt.title('Customer Age Distribution by Attrition Flag')
 plt.show()
 
-sns.boxplot(data=df[['Customer_Age',
-                     'Credit_Limit',
+sns.boxplot(data=df[['Total_Amt_Chng_Q4_Q1',
                      'Months_on_book',
                      'Total_Trans_Ct']])
 
@@ -41,7 +40,7 @@ plt.title('Box Plot of Customer Data')
 plt.show()
 
 
-num=df[['Total_Relationship_Count', 'Months_Inactive_12_mon']]
+num=df[['Total_Relationship_Count', 'Months_Inactive_12_mon','Contacts_Count_12_mon', 'Credit_Limit', 'Total_Revolving_Bal', 'Avg_Open_To_Buy', 'Total_Amt_Chng_Q4_Q1', 'Total_Trans_Amt', 'Total_Trans_Ct', 'Avg_Utilization_Ratio']]
 
 corr=num.corr()
 
