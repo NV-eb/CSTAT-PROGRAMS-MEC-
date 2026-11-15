@@ -14,3 +14,8 @@ pivot=pd.pivot_table(df, index="Department", values="Salary", aggfunc="mean")
 
 print("Pivot Table:")
 print(pivot)
+
+crosstble=pd.crosstab(df['Department'], df['Name'])
+
+print("Crosstab:")
+print(crosstble)
